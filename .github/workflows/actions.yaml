@@ -4,13 +4,17 @@ on: [ push ]
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        filename: [ stages-test, thresholds-test ]
     steps:
-      - uses: actions/checkout@v2
-      - name: Run stages-test
+      - uses: actions/checkout@v3
+      - name: Run ${{ matrix.filename }}
         uses: grafana/k6-action@v0.2.0
         with:
-          filename: stages-test.js
-      - name: Run thresholds-test
-        uses: grafana/k6-action@v0.2.0
+          filename: ${{ matrix.filename }}.js
+      - name: Upload performance test results
+        uses: actions/upload-artifact@v3
         with:
-          filename: thresholds-test.js
+          name: ${{ matrix.filename }}
+          path: ${{ matrix.filename }}.html
