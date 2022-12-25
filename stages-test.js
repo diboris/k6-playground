@@ -4,14 +4,14 @@ import {htmlReport} from 'https://raw.githubusercontent.com/benc-uk/k6-reporter/
 
 export const options = {
     stages: [
-        {target: 25, duration: "30s"},
-        {target: 20, duration: "30s"},
-        {target: 5, duration: "10s"}
+        {target: 10, duration: '30s'},
+        {target: 15, duration: '30s'},
+        {target: 5, duration: '10s'}
     ],
     ext: {
         loadimpact: {
             projectID: 3620670,
-            name: "'k6-playground'"
+            name: 'k6-playground'
         }
     },
 }

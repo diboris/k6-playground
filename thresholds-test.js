@@ -4,11 +4,11 @@ import {htmlReport} from "https://raw.githubusercontent.com/benc-uk/k6-reporter/
 
 export let options = {
     duration: '1m',
-    vus: 50,
+    vus: 20,
     ext: {
         loadimpact: {
             projectID: 3620670,
-            name: "'k6-playground'"
+            name: 'k6-playground'
         }
     },
     thresholds: {
