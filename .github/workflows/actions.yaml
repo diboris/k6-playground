@@ -17,8 +17,8 @@ jobs:
           filename: ${{ matrix.filename }}.js
           cloud: true
           token: ${{ secrets.K6_CLOUD_API_TOKEN }}
-      - name: Upload performance test results
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ matrix.filename }}
-          path: ${{ matrix.filename }}.html
+#      - name: Upload performance test results
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: ${{ matrix.filename }}
+#          path: ${{ matrix.filename }}.html
