@@ -6,6 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Run stages-test
+        uses: grafana/k6-action@v0.2.0
         with:
-          node-version: '16'
+          filename: stages-test.js
+      - name: Run thresholds-test
+        uses: grafana/k6-action@v0.2.0
+        with:
+          filename: thresholds-test.js
