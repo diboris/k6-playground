@@ -5,6 +5,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
+      max-parallel: 1
       matrix:
         filename: [ stages-test, thresholds-test ]
     steps:
