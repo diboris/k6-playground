@@ -1,11 +1,11 @@
-# K6 playground [![Build Actions Status](https://github.com/diboris/k6-playground/actions/workflows/actions.yml/badge.svg)](https://github.com/diboris/jsonbin-api-supertest/actions)
+# K6 playground [![Build Actions Status](https://github.com/diboris/k6-playground/actions/workflows/actions.yaml/badge.svg)](https://github.com/diboris/k6-playground/actions)
 
 Showcase project tests [test.k6](https://test.k6.io/) using [k6](https://k6.io/)
 
 To run locally:
 
 ```bash
-
+k6 cloud stages-test.js && k6 cloud thresholds-test.js
 ```
 
 ## Reports
